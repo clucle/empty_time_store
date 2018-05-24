@@ -117,7 +117,7 @@
     }
     
     .content.show {
-        max-height: 1080px;
+        max-height: 100%;
         transition: max-height .4s;
         -webkit-transition: max-height .4s;
     }
@@ -222,6 +222,7 @@
             <div id="menu-jelly" class="header-menu"><p>젤리</p></div>
             <div id="menu-bread" class="header-menu"><p>빵</p></div>
             <div id="menu-food" class="header-menu"><p>식사</p></div>
+            <div id="menu-festiva" class="header-menu"><p>축제과자(즉시배달)</p></div>
         </div>
     </div>
 </div>
@@ -649,6 +650,132 @@
         </div>
     </div>
 </div>
+
+<div id="menu-8" class="content hide">
+    <div class="store">
+        <div class="wrap-card menu8-card hide">
+            <div class="card-back"></div>
+
+
+            <div class="card">
+                <div class="card-image">
+                    <img class="card-img"
+                    src="https://raw.githubusercontent.com/clucle/empty_time_store/gh-pages/snack/G_MD.jpg">    
+                </div>
+                
+                <div class="card-title">
+                    <div class="table-div" style="height: 100%; width: 100%;">
+                        <div class="vcenter">
+                            <p class="store-text">꼬깔콘 매콤달콤(big)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-price">
+                    <div class="table-div" style="height: 100%; width: 100%;">
+                        <div class="vcenter">
+                            <p class="store-text">1,500 원</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img class="card-img"
+                    src="https://raw.githubusercontent.com/clucle/empty_time_store/gh-pages/snack/G_HB.jpg">    
+                </div>
+                
+                <div class="card-title">
+                    <div class="table-div" style="height: 100%; width: 100%;">
+                        <div class="vcenter">
+                            <p class="store-text">꼬깔콘 허니버터</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-price">
+                    <div class="table-div" style="height: 100%; width: 100%;">
+                        <div class="vcenter">
+                            <p class="store-text">1,200 원</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img class="card-img"
+                    src="https://raw.githubusercontent.com/clucle/empty_time_store/gh-pages/snack/G_CS.jpg">    
+                </div>
+                
+                <div class="card-title">
+                    <div class="table-div" style="height: 100%; width: 100%;">
+                        <div class="vcenter">
+                            <p class="store-text">꼬깔콘 콘스프</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-price">
+                    <div class="table-div" style="height: 100%; width: 100%;">
+                        <div class="vcenter">
+                            <p class="store-text">1,200 원</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img class="card-img"
+                    src="https://raw.githubusercontent.com/clucle/empty_time_store/gh-pages/snack/D_NC.jpg">    
+                </div>
+                
+                <div class="card-title">
+                    <div class="table-div" style="height: 100%; width: 100%;">
+                        <div class="vcenter">
+                            <p class="store-text">도리토스 나쵸치즈(big)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-price">
+                    <div class="table-div" style="height: 100%; width: 100%;">
+                        <div class="vcenter">
+                            <p class="store-text">1,500 원</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img class="card-img"
+                    src="https://raw.githubusercontent.com/clucle/empty_time_store/gh-pages/snack/D_HB.jpg">    
+                </div>
+                
+                <div class="card-title">
+                    <div class="table-div" style="height: 100%; width: 100%;">
+                        <div class="vcenter">
+                            <p class="store-text">도리토스 허니버터(big)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-price">
+                    <div class="table-div" style="height: 100%; width: 100%;">
+                        <div class="vcenter">
+                            <p class="store-text">1,500 원</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script>
     $( document ).ready(function() {
         
@@ -693,7 +820,10 @@
         changeScreen(7);
     });
     
-    
+    $( "#menu-festival" ).click(function() {
+        changeScreen(8);
+    });
+
     function changeScreen(newClicked) {
         if (isAnimated) return ;
         if (clicked === newClicked) {
@@ -749,5 +879,8 @@
         $( "#menu-" + i ).addClass( "hide" );
     }
     
+    // 축제용 기본 셋팅
+    changeScreen(8);
+
 </script>
 </html>
